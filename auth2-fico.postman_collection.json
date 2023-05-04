@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "b7c3ca52-0e09-472e-bdf6-b116dd66be9d",
+		"name": "auth2-fico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8440181",
+		"_collection_link": "https://galactic-satellite-628491.postman.co/workspace/konex~dbb05597-4208-4ce2-8db9-e220dbb4cb68/collection/8440181-b7c3ca52-0e09-472e-bdf6-b116dd66be9d?action=share&creator=8440181&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "localhost:8081/api/v1/empresas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "jPkQ7lSJ3R4WZPIFXnR4CNXqerdtJQ0n0ObsZcKBaocB5LnO3QUgpyQX152Vx2LU-6LXoBGgJsuTbXjp1NTQtgU5aPMLyKAC0Nje8jk0PVYTlBb3ZsEBhpWmiQ7Hfv6v",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/empresas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/v1/empresas ultimos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "jPkQ7lSJ3R4WZPIFXnR4CNXqerdtJQ0n0ObsZcKBaocB5LnO3QUgpyQX152Vx2LU-6LXoBGgJsuTbXjp1NTQtgU5aPMLyKAC0Nje8jk0PVYTlBb3ZsEBhpWmiQ7Hfv6v",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8081/api/v1/empresas/last",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas",
+						"last"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8081/api/v1/empresas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "jPkQ7lSJ3R4WZPIFXnR4CNXqerdtJQ0n0ObsZcKBaocB5LnO3QUgpyQX152Vx2LU-6LXoBGgJsuTbXjp1NTQtgU5aPMLyKAC0Nje8jk0PVYTlBb3ZsEBhpWmiQ7Hfv6v",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ruc\": \"2544545411423420\",\r\n    \"razonSocial\": \"Empresa B\",\r\n    \"direccion\": \"2D de Mayo\",\r\n    \"estado\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/api/v1/empresas",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"empresas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authorization_code",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/oauth2/token?client_id=client&redirect_uri=https://springone.io/authorized&grant_type=authorization_code&code=SmaJ5bRAhfNalDgzE2rOupkY-U0QhIi8ito2m4Xlk8Wm6Cl-5YuBQP757YsPK21r9-MwmJ_8j6584gA703zEGKYFhLkng5W3gvdI9K1DzQ_N0Yyh96aKhrmjKSaga3nM&code_verifier=qPsH306-ZDDaOE8DFzVn05TkN3ZZoVmI_6x4LsVglQI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "client"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "https://springone.io/authorized"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						},
+						{
+							"key": "code",
+							"value": "SmaJ5bRAhfNalDgzE2rOupkY-U0QhIi8ito2m4Xlk8Wm6Cl-5YuBQP757YsPK21r9-MwmJ_8j6584gA703zEGKYFhLkng5W3gvdI9K1DzQ_N0Yyh96aKhrmjKSaga3nM"
+						},
+						{
+							"key": "code_verifier",
+							"value": "qPsH306-ZDDaOE8DFzVn05TkN3ZZoVmI_6x4LsVglQI"
+						},
+						{
+							"key": "scope",
+							"value": "openid",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/oauth2/introspect?introspect",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "secret",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/oauth2/introspect?token=yAl_AUKM2HJ80yCiN50hE--T9RVkN8HCMMhGhcIo9mTvWmKEMTxQlI3FtvHJSvxE8BtNf1ZsFII5kLMICYze8GnVPmveh1C75HOxjBmBMxKgRfw55-tSet24R27eZWxG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth2",
+						"introspect"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "yAl_AUKM2HJ80yCiN50hE--T9RVkN8HCMMhGhcIo9mTvWmKEMTxQlI3FtvHJSvxE8BtNf1ZsFII5kLMICYze8GnVPmveh1C75HOxjBmBMxKgRfw55-tSet24R27eZWxG"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
